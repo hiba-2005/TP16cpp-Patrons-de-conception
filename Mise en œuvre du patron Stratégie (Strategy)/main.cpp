@@ -1,4 +1,4 @@
-// main.cpp
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -48,14 +48,14 @@ public:
 class AffichageTemperature : public Observateur {
 public:
     void mettreAJour(float temperature, float, float) override {
-        cout << "[Température] = " << temperature << " °C" << endl;
+        cout << "[TempÃ©rature] = " << temperature << " Â°C" << endl;
     }
 };
 
 class AffichageHumidite : public Observateur {
 public:
     void mettreAJour(float, float humidite, float) override {
-        cout << "[Humidité] = " << humidite << " %" << endl;
+        cout << "[HumiditÃ©] = " << humidite << " %" << endl;
     }
 };
 
@@ -78,13 +78,13 @@ int main() {
     station.ajouterObservateur(&hum);
     station.ajouterObservateur(&pres);
 
-    cout << "=== Mise à jour 1 ===" << endl;
+    cout << "=== Mise Ã  jour 1 ===" << endl;
     station.setMesures(24.3, 60.2, 1513.5);
 
-    cout << "\n=== Suppression de l'observateur Humidité ===" << endl;
+    cout << "\n=== Suppression de l'observateur HumiditÃ© ===" << endl;
     station.supprimerObservateur(&hum);
 
-    cout << "\n=== Mise à jour 2 ===" << endl;
+    cout << "\n=== Mise Ã  jour 2 ===" << endl;
     station.setMesures(27.7, 65.1, 1210.2);
 
     return 0;
