@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1762455146 source:c:\users\pc\documents\3 eme annee\c++\tp16c++\application du patron observateur (observer)\main.cpp
+	<iostream>
+	<vector>
+	<memory>
+	<algorithm>
+
